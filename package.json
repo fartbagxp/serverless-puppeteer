@@ -1,0 +1,27 @@
+{
+  "name": "serverless-puppeteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serverless:deploy": "serverless deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fartbagxp/serverless-puppeteer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fartbagxp/serverless-puppeteer/issues"
+  },
+  "homepage": "https://github.com/fartbagxp/serverless-puppeteer#readme",
+  "dependencies": {
+    "puppeteer-core": "^1.19.0",
+    "serverless-apigw-binary": "0.4.4",
+    "serverless-apigwy-binary": "1.0.0"
+  },
+  "devDependencies": {
+    "serverless": "^1.51.0"
+  }
+}
