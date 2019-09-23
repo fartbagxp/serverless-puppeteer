@@ -1,22 +1,22 @@
-"use strict";
-const puppeteer = require("puppeteer-core");
+'use strict';
+const puppeteer = require('puppeteer-core');
 
 module.exports.index = async (event, context) => {
   try {
     const browser = await puppeteer.launch({
       headless: true,
-      executablePath: "/opt/headless_shell",
-      args: ["--no-sandbox", "--disable-gpu", "--single-process"]
+      executablePath: '/opt/headless_shell',
+      args: ['--no-sandbox', '--disable-gpu', '--single-process']
     });
 
     const page = await browser.newPage();
-    await page.goto(event["queryStringParameters"].address, {
-      waitUntil: ["domcontentloaded", "networkidle0"]
+    await page.goto(event['queryStringParameters'].address, {
+      waitUntil: ['domcontentloaded', 'networkidle0']
     });
 
     const image = await page.screenshot({
       clip: { x: 0, y: 0, width: 1024, height: 800 },
-      encoding: "base64"
+      encoding: 'base64'
     });
 
     browser.close();
@@ -25,7 +25,7 @@ module.exports.index = async (event, context) => {
       statusCode: 200,
       body: image,
       headers: {
-        "Content-Type": "image/png"
+        'Content-Type': 'image/png'
       },
       isBase64Encoded: true
     };
