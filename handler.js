@@ -1,7 +1,7 @@
 'use strict';
 const puppeteer = require('puppeteer-core');
 
-module.exports.index = async (event, context) => {
+module.exports.index = async event => {
   try {
     const browser = await puppeteer.launch({
       headless: true,
