@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serverless:deploy": "serverless deploy"
+    "serverless:package": "serverless package",
+    "serverless:deploy": "serverless deploy",
+    "serverless:remove": "serverless remove"
   },
   "repository": {
     "type": "git",
