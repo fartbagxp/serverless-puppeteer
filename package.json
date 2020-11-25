@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/fartbagxp/serverless-puppeteer#readme",
   "dependencies": {
-    "snyk": "^1.409.1"
+    "snyk": "^1.425.4"
   },
   "devDependencies": {
     "chrome-aws-lambda": "file:chrome-aws-lambda",
